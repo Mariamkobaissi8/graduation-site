@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protected Graduation Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #fefcea, #f1da36);
+      color: #333;
+      text-align: center;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    input {
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+      width: 60%;
+      font-size: 1rem;
+    }
+    button {
+      padding: 0.6rem 1.5rem;
+      background-color: #ff6f00;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .hidden-content {
+      display: none;
+    }
+  </style>
+  <script>
+    function checkPassword() {
+      var input = document.getElementById('password-input').value;
+      if (input === 'GradButCEOVibes') {
+        document.getElementById('login-box').style.display = 'none';
+        document.getElementById('protected-content').style.display = 'block';
+      } else {
+        alert('Incorrect password, try again!');
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="login-box" class="container">
+    <h2>Enter Password to Access Graduation Surprise 🎓</h2>
+    <input type="password" id="password-input" placeholder="Enter password here..."><br>
+    <button onclick="checkPassword()">Unlock</button>
+  </div>
+
+  <div id="protected-content" class="container hidden-content">
+    <div class="confetti">🎉🎓🎉</div>
+    <h1>Congrats, [Her Name]!</h1>
+    <h2>You Did It!</h2>
+    <p>You’ve officially graduated, and we couldn't be prouder of you. Your late nights, dedication, and hustle paid off in the most epic way!</p>
+    <p>This isn’t just a website—it’s your digital standing ovation.</p>
+    <a href="#" class="btn">View Your Award</a>
+    <div class="footer" style="margin-top:2rem; font-size: 0.9rem; color:#555;">
+      Made with love by your biggest fan 💕<br>
+      (P.S. Check the back of your business card 😉)
+    </div>
+  </div>
+</body>
+</html>
